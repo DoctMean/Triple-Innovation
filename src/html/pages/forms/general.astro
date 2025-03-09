@@ -1,0 +1,459 @@
+---
+import Head from "@components/_head.astro";
+import Footer from "@components/dashboard/_footer.astro";
+import Topbar from "@components/dashboard/_topbar.astro";
+import Sidenav from "@components/dashboard/_sidenav.astro";
+import Scripts from "@components/_scripts.astro";
+
+const title = "LANTU | General Form Elements";
+const path = "../../../dist";
+const mainPage = "forms";
+const page = "general";
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+  <!--begin::Head-->
+  <head>
+    <Head title={title} path={path} />
+  </head>
+  <!--end::Head-->
+  <!--begin::Body-->
+  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <!--app-->
+    <div class="app-wrapper">
+      <Topbar path={path} />
+      <Sidenav path={path} mainPage={mainPage} page={page} />
+      <!--begin::App Main-->
+      <main class="app-main">
+        <!--Header-->
+        <div class="app-content-header">
+          <!--容器-->
+          <div class="container-fluid">
+            <!--上边栏-->
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="mb-0">表单范例</h3>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a href="#">主页</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    表单范例
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <!--上边栏1-->
+          </div>
+          <!--容器1-->
+        </div>
+        <!--Header1-->
+        <!--内容-->
+        <div class="app-content">
+          <!--容器-->
+          <div class="container-fluid">
+            <!--上边栏-->
+            <div class="row g-4">
+              <!--模块-->
+              <div class="col-md-6">
+                <!--上传文件-->
+                <div class="card card-primary card-outline mb-4">
+                  <!--Header-->
+                  <div class="card-header">
+                    <div class="card-title">景区上传</div>
+                  </div>
+                  <!--Header-->
+                  <!--Form-->
+                  <form>
+                    <!--Body-->
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >邮箱地址</label
+                        >
+                        <div class="form-text">
+                        验证身份
+                        </div>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                        
+                      </div>
+
+                      <div class="form-text">景区简介</div>
+                      <div class="input-group">
+                        <span class="input-group-text">输入文本</span>
+                        <textarea class="form-control" aria-label="With textarea"
+                        ></textarea>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="开放时间"
+                          aria-label="开放时间"
+                        />
+                        
+                      </div>
+                      <div class="input-group mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="经度"
+                          aria-label="经度"
+                        />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="纬度"
+                          aria-label="纬度"
+                        />
+                      </div>
+                      <div class="form-text">景区图片</div>
+                      <div class="input-group mb-3">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="inputGroupFile02"
+                        />
+                        <label class="input-group-text" for="inputGroupFile02"
+                          >上传</label
+                        >
+                      </div>
+
+                    </div>
+                    <!--Body1-->
+                    <!--Footer-->
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-primary"
+                        >提交</button
+                      >
+                    </div>
+                    <!--Footer1-->
+                  </form>
+                  <!--Form1-->
+                </div>
+                <!--上传文件1-->
+                <!--begin::Input Group-->
+                <div class="card card-success card-outline mb-4">
+                  <!--begin::Header-->
+                  <div class="card-header">
+                    <div class="card-title">景点上传</div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body">
+
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="景区名"
+                        aria-label="景区名"
+                      />
+                      <span class="input-group-text">——</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="景点名"
+                        aria-label="景点名"
+                      />
+                    </div>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="开放时间"
+                        aria-label="开放时间"
+                      />
+                      
+                    </div>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="经度"
+                        aria-label="经度"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="纬度"
+                        aria-label="纬度"
+                      />
+                    </div>
+                    <div class="form-text">景点资料等</div>
+                    <div class="input-group">
+                      <span class="input-group-text">输入文本</span>
+                      <textarea class="form-control" aria-label="With textarea"
+                      ></textarea>
+                    </div>
+                    <div class="form-text">图片资料</div>
+                    <div class="input-group mb-3">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputGroupFile02"
+                      />
+                      <label class="input-group-text" for="inputGroupFile02"
+                        >上传</label
+                      >
+                    </div>
+                    <div class="form-text">音频资料</div>
+                    <div class="input-group mb-3">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputGroupFile02"
+                      />
+                      <label class="input-group-text" for="inputGroupFile02"
+                        >上传</label
+                      >
+                    </div>
+                    
+                  </div>
+                  <!--Body1-->
+                  <!--Footer-->
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-success">提交</button
+                    >
+                  </div>
+                  <!--Footer1-->
+                </div>
+                <!--Input Group1-->
+
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col-md-6">
+                
+                <!--begin::Different Width-->
+                <div class="card card-danger card-outline mb-4">
+                  <!--begin::Header-->
+                  <div class="card-header">
+                    <div class="card-title">Different Width</div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body">
+                    <!--begin::Row-->
+                    <div class="row">
+                      <ul class="list-group">
+                        <li class="list-group-item">报警信息1</li>
+                        <li class="list-group-item">报警信息2</li>
+                        <li class="list-group-item">报警信息3</li>
+                        <li class="list-group-item">报警信息4</li>
+                        <li class="list-group-item">报警信息5</li>
+                    </ul>
+                    </div>
+                    <!--end::Row-->
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Different Width-->
+
+
+                <!--begin::Form Validation-->
+                <div class="card card-info card-outline mb-4">
+                  <!--begin::Header-->
+                  <div class="card-header">
+                    <div class="card-title">Form Validation</div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Form-->
+                  <form class="needs-validation" novalidate>
+                    <!--begin::Body-->
+                    <div class="card-body">
+                      <!--begin::Row-->
+                      <div class="row g-3">
+                        <!--begin::Col-->
+                        <div class="col-md-6">
+                          <label for="validationCustom01" class="form-label"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom01"
+                            value="Mark"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6">
+                          <label for="validationCustom02" class="form-label"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom02"
+                            value="Otto"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6">
+                          <label
+                            for="validationCustomUsername"
+                            class="form-label">Username</label
+                          >
+                          <div class="input-group has-validation">
+                            <span
+                              class="input-group-text"
+                              id="inputGroupPrepend">@</span
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="validationCustomUsername"
+                              aria-describedby="inputGroupPrepend"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6">
+                          <label for="validationCustom03" class="form-label"
+                            >City</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom03"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Please provide a valid city.
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6">
+                          <label for="validationCustom04" class="form-label"
+                            >State</label
+                          >
+                          <select
+                            class="form-select"
+                            id="validationCustom04"
+                            required
+                          >
+                            <option selected disabled value="">Choose...</option
+                            >
+                            <option>...</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please select a valid state.
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6">
+                          <label for="validationCustom05" class="form-label"
+                            >Zip</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom05"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Please provide a valid zip.
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="invalidCheck"
+                              required
+                            />
+                            <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                      </div>
+                      <!--end::Row-->
+                    </div>
+                    <!--end::Body-->
+                    <!--begin::Footer-->
+                    <div class="card-footer">
+                      <button class="btn btn-info" type="submit"
+                        >Submit form</button
+                      >
+                    </div>
+                    <!--end::Footer-->
+                  </form>
+                  <!--end::Form-->
+                  <!--begin::JavaScript-->
+                  <script is:inline>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (() => {
+                      "use strict";
+
+                      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                      const forms =
+                        document.querySelectorAll(".needs-validation");
+
+                      // Loop over them and prevent submission
+                      Array.from(forms).forEach((form) => {
+                        form.addEventListener(
+                          "submit",
+                          (event) => {
+                            if (!form.checkValidity()) {
+                              event.preventDefault();
+                              event.stopPropagation();
+                            }
+
+                            form.classList.add("was-validated");
+                          },
+                          false
+                        );
+                      });
+                    })();
+                  </script>
+                  <!--end::JavaScript-->
+                </div>
+                <!--end::Form Validation-->
+
+
+              </div>
+              <!--end::Col-->
+            </div>
+            <!--end::Row-->
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::App Content-->
+      </main>
+      <!--end::App Main-->
+      <Footer />
+    </div>
+    <!--app1-->
+    <!--Script-->
+    <Scripts path={path} />
+    <!--Script1-->
+  </body><!--end::Body-->
+</html>

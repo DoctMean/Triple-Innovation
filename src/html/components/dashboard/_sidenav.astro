@@ -1,0 +1,233 @@
+---
+import {convertPathToHtml} from "../../../utils/index.js";
+const {path, mainPage, page} = Astro.props;
+const htmlPath = convertPathToHtml(path);
+---
+
+<!--侧边栏-->
+<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+  <!--铭牌-->
+  <div class="sidebar-brand">
+    <!--链接-->
+    <a href={htmlPath + "/index.html"} class="brand-link">
+      <!--徽记-->
+      <img
+        src={path + "/assets/img/LANTU.png"}
+        alt="AdminLTE Logo"
+        class="brand-image opacity-75 shadow"
+      />
+      <!--徽记1-->
+      <!--名称-->
+      <span class="brand-text fw-light">LANTU</span>
+      <!--名称1-->
+    </a>
+    <!--链接1-->
+  </div>
+  <!--铭牌1-->
+  <!--选择侧栏-->
+  <div class="sidebar-wrapper">
+    <nav class="mt-2">
+      <!--侧栏菜单-->
+      <ul
+        class="nav sidebar-menu flex-column"
+        data-lte-toggle="treeview"
+        role="menu"
+        data-accordion="false"
+      >
+        <li class:list={["nav-item", mainPage === "dashboard" && "menu-open"]}>
+          <a
+            href="#"
+            class:list={["nav-link", mainPage === "dashboard" && "active"]}
+          >
+            <i class="nav-icon bi bi-speedometer"></i>
+            <p>
+              数据展板
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index.html"}
+                class:list={["nav-link", page === "index" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>相关设施</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index2.html"}
+                class:list={["nav-link", page === "index2" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>数据分析</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index3.html"}
+                class:list={["nav-link", page === "index3" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>报警信息</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class:list={["nav-item", mainPage === "widgets" && "menu-open"]}>
+          <a
+            href="#"
+            class:list={["nav-link", mainPage === "widgets" && "active"]}
+          >
+            <i class="nav-icon bi bi-box-seam-fill"></i>
+            <p>
+              简化展板
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/widgets/small-box.html"}
+                class:list={["nav-link", page === "small-box" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>设施状态</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/widgets/info-box.html"}
+                class:list={["nav-link", page === "info-box" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>数据名片</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/widgets/cards.html"}
+                class:list={["nav-link", page === "cards" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>报警信息</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class:list={["nav-item", mainPage === "forms" && "menu-open"]}>
+          <a
+            href="#"
+            class:list={["nav-link", mainPage === "forms" && "active"]}
+          >
+            <i class="nav-icon bi bi-pencil-square"></i>
+            <p>
+              表单
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/forms/general.html"}
+                class:list={["nav-link", page === "general" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>表单范例</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class:list={["nav-item", mainPage === "tables" && "menu-open"]}>
+          <a
+            href="#"
+            class:list={["nav-link", mainPage === "tables" && "active"]}
+          >
+            <i class="nav-icon bi bi-table"></i>
+            <p>
+              数据图表
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/tables/simple.html"}
+                class:list={["nav-link", page === "simple" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>图表</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-header">管理示例</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon bi bi-box-arrow-in-right"></i>
+            <p>
+              登录窗口
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                <p>
+                  Version 1
+                  <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/login.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>登录</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/register.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>注册</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                <p>
+                  Version 2
+                  <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/login-v2.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>登录</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/register-v2.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>注册</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+          </ul>
+        </li>
+
+      </ul>
+      <!--侧栏菜单1-->
+    </nav>
+  </div>
+  <!--选择侧栏1-->
+</aside>
+<!--侧边栏1-->
